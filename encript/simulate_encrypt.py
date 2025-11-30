@@ -25,7 +25,6 @@ for fname in os.listdir(WORKDIR):
         with open(fpath, "rb") as f:
             data = f.read()
 
-        # Conteúdo codificado em base64 — simulação segura
         encoded = base64.b64encode(data).decode("utf-8")
         newname = fpath + ".encsim"
 
@@ -38,9 +37,6 @@ for fname in os.listdir(WORKDIR):
 
 # cria nota de resgate educacional
 with open(os.path.join(WORKDIR, "nota_de_resgate.txt"), "w", encoding="utf-8") as rn:
-    rn.write("=== LABORATÓRIO EDUCACIONAL ===\n")
-    rn.write("Seus arquivos foram *simulados* como criptografados.\n")
-    rn.write("Este exercício é apenas para fins educacionais.\n")
-    rn.write("Não pagar qualquer resgate. Ambiente controlado.\n")
+    rn.write("=== Finalizado ===\n")
 
 print("Simulação concluída!")
